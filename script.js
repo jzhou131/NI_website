@@ -74,3 +74,5 @@ function toggleDropdown() {
     const menu = document.querySelector('.dropdown-menu');
     menu.classList.toggle('active');
 }
+
+document.querySelector('.logo a').href = 'index.html';
