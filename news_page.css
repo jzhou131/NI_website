@@ -1,0 +1,47 @@
+/* Banner Styling */
+.news-banner {
+    width: 100%;
+    height: 300px;
+    background: #b00c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Single News Section */
+.news {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* News Title */
+.news h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* News Description */
+.news p {
+    font-size: 1.5 rem;
+    color: #555;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* News Image */
+.news img {
+    width: 80%;
+    border-radius: 6px;
+    /* max-height: 200px; */
+    object-fit: cover;
+}
