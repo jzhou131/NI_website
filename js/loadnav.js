@@ -1,5 +1,5 @@
 // /js/loadnav.js
-fetch('./html/nav.html')
+fetch('/html/nav.html')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
