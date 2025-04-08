@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/html/nav.html')
+    fetch('./html/nav.html')
       .then(response => response.text())
       .then(data => {
         document.querySelector("#nav-placeholder").innerHTML = data;
@@ -84,4 +84,4 @@ function toggleDropdown() {
     menu.classList.toggle('active');
 }
 
-document.querySelector('.logo a').href = 'index.html';
+document.querySelector('.logo a').href = './index.html';
