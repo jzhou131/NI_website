@@ -1,0 +1,114 @@
+/* Banner Styling */
+.project-banner {
+    width: 100%;
+    height: 300px;
+    background: #b00c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container for the entire project page */
+.project-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Project Title
+.project-title {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+} */
+.project-container h1 {
+    font-size: 1.8rem;
+}
+
+/* Section Headers */
+.project-container h2 {
+    font-size: 1.8rem;  /* Slightly larger headers */
+    color: #444;
+    margin-top: 30px;  /* More space above */
+    margin-bottom: 15px;  /* More space below */
+    font-weight: bold;
+    display: block; /* Ensures proper spacing */
+}
+
+/* People Involved List */
+.project-people ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-people li {
+    color: #555;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* .project-publications li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+} */
+
+/* Links */
+/* .project-publications a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease-in-out;
+} */
+
+/* .project-publications a:hover {
+    color: #0056b3;
+} */
+
+/* Project Description */
+.project-description p {
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.image-gallery img {
+    width: 100%;
+    /* max-width: 250px; */
+    /* height: auto; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .image-gallery img:hover {
+    transform: scale(1.05);
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
