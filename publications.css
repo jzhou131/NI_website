@@ -1,0 +1,113 @@
+/* Banner Styling */
+.publications-banner {
+    width: 100%;
+    height: 300px;
+    background: #b00c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Tabs Container */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual Tab Styling */
+.tab {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for color change */
+.tab:hover {
+    color:#f40404;
+}
+
+/* Active Tab */
+.tab.active {
+    color:#f40404;
+    border-bottom: 2px solid#f40404; /* Underline effect when active */
+}
+
+/* Publications List Styling */
+.publications-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-top: 50px; */
+}
+
+/* Adjust the width of the publication box to match tabs */
+.publications {
+    display: none;
+    text-align: left;
+    max-width: 900px; /* Adjust the width as needed */
+    width: 100%; /* Ensure it stretches across the container */
+    padding: 20px;
+}
+
+.year-header {
+    font-size: 1.5rem;  /* adjust as needed */
+    margin-top: 2rem;   /* adds space above */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+.publications.active {
+    display: block;
+}
+
+.publications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.publications li {
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hide Dropdown By Default */
+.dropdown-container {
+    display: none;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Responsive Dropdown */
+@media (max-width: 800px) {
+    .tabs {
+        display: none;
+    }
+
+    .dropdown-container {
+        display: flex;
+        justify-content: left;
+        margin: 15px;
+    }
+
+    .dropdown {
+        padding: 10px;
+        font-size: 1.2rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown option:hover {
+        background-color: grey;
+        color: red;
+    }
+}
