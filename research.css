@@ -20,6 +20,13 @@
     /* padding: 20px; */
 }
 
+.project-overview ul {
+    list-style-position: inside;   /* Keeps bullets aligned with centered text */
+    text-align: center;            /* Centers the text */
+    padding: 0;
+    margin: 20px auto;             /* Adds space and centers the list block */
+}
+
 .project-overview p {
     font-size: 1.1rem;
     color: #555;
