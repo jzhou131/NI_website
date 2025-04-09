@@ -32,10 +32,41 @@
     <!-- Bottom -->
     <div id="bottom-placeholder"></div>
 
-    
-    <script src="../js/loadnav.js"></script>
-    <script src="../js/loadbottom.js"></script>
     <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
 
 </body>
 </html>
