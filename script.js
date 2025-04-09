@@ -1,19 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('./html/nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.querySelector("#nav-placeholder").innerHTML = data;
-        initializeHamburger(); // Re-initialize any JavaScript related to the navbar after loading it
-      });
-  });
+// document.addEventListener("DOMContentLoaded", function() {
+//     fetch('./html/nav.html')
+//       .then(response => response.text())
+//       .then(data => {
+//         document.querySelector("#nav-placeholder").innerHTML = data;
+//         initializeHamburger(); // Re-initialize any JavaScript related to the navbar after loading it
+//       });
+//   });
   
-  function initializeHamburger() {
+//   function initializeHamburger() {
+//     const menuToggle = document.querySelector(".menu-toggle");
+//     const navLinks = document.querySelector(".nav-links ul");
+  
+//     menuToggle.addEventListener("click", function () {
+//       navLinks.classList.toggle("active");
+//     });
+//   }
+
+function initializeHamburger() {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links ul");
   
-    menuToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    }
   }
 
 const leftArrow = document.querySelector('.left-arrow');
