@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Research</title>
     <link rel="stylesheet" href="news_page.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -31,9 +31,41 @@
     <div id="bottom-placeholder"></div>
 
     
-    <script src="/js/loadnav.js"></script>
-    <script src="/js/loadbottom.js"></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav_2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom_2.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
 
 </body>
 </html>
