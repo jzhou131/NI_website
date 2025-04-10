@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Name</title>
-    <link rel="stylesheet" href="/projects/project_pages.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="project_pages.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -38,24 +38,10 @@
             <p>Read more about the project <a href="https://nij.ojp.gov/funding/awards/15pnij-22-gg-04442-ress" target="_blank">here</a>.</p>
         </div>
 
-        <!-- Publications -->
-        <!-- <div class="project-publications">
-            <h2>Publications</h2>
-            <ul>
-                <li>Nicolas Zefeng Lei Cai, Jinxin Chen, Shuna Ni, Stanislav I. Stoliarov, 
-                    “Impact of Architectural Finishes on Fire Patterns”, ISFI 2024, Orlando, FL, September 16-18, 2024
-                </li>
-                <li>Shuna Ni, Pengkun Liu, Nicolas Lei Cai, Pingbo Tang, Stanislav I. Stoliarov, “Advancing Fire Pattern 
-                    Analysis Experimental Insights on Architectural Finishes and the Development of Data-Driven Tools”, 
-                    2024 NIJ Forensic Science R&D Symposium, Denver, CO, USA, Feb 20, 2024
-                </li>
-            </ul>
-        </div> -->
-
         <!-- Images Section -->
         <div class="project-images">
             <div class="image-gallery">
-                <img src="/projects/arch_poster.jpg" alt="Project Image 1">
+                <img src="arch_poster.jpg" alt="Project Image 1">
                 <!-- <img src="image2.jpg" alt="Project Image 2"> -->
                 <!-- <img src="image3.jpg" alt="Project Image 3"> -->
             </div>
@@ -67,9 +53,41 @@
     <div id="bottom-placeholder"></div>
 
     
-    <script src="/js/loadnav.js"></script>
-    <script src="/js/loadbottom.js"></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav_2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom_2.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
 
 </body>
 </html>
