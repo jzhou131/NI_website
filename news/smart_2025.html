@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART 2025</title>
+    <link rel="stylesheet" href="news_page.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Banner Section -->
+    <div class="news-banner">
+        <h1>Dr. Ni Presents Fire Safety Research on Mass Timber Buildings at Yale University</h1>
+    </div> 
+
+    <section class="news">
+        <h2>Dr. Ni Presents Fire Safety Research on Mass Timber Buildings at Yale University</h2>
+        <p>Dr. Ni spearheaded SMART 2025 hosted at Yale School of Engineering & Applied Science. 
+            Dr. Ni's presentation focused on advancing fire safety in tall mass timber buildings by unlocking the potential of 
+            climate-friendly timber construction products. Read more about this event <a href="https://www.linkedin.com/posts/yaleengineering_sustainablematerials-engineeredwood-masstimber-activity-7363629661819420672-3cNV" target="_blank">here</a>.
+        </p>
+        <img src="smart_2025_1.png" alt="News Image">
+        <img src="smart_2025_2.jpg" alt="News Image">
+    </section>
+
+    <!-- Bottom -->
+    <div id="bottom-placeholder"></div>
+
+    
+    <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav_2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom_2.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
+
+</body>
+</html>

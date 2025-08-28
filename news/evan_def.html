@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan's Defense</title>
+    <link rel="stylesheet" href="news_page.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Banner Section -->
+    <div class="news-banner">
+        <h1>Evan Passes Final Defense</h1>
+    </div> 
+
+    <section class="news">
+        <h2>Evan Passes Final Defense</h2>
+        <p>Evan passes his final defense on August 13rd. Evan's research focused on the Wildland Urban Interface (WUI) fire problem.</p>
+        <img src="evan_def.jpg" alt="News Image">
+    </section>
+
+    <!-- Bottom -->
+    <div id="bottom-placeholder"></div>
+
+    
+    <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav_2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom_2.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
+
+</body>
+</html>

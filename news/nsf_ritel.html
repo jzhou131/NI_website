@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSF RITEL Award</title>
+    <link rel="stylesheet" href="news_page.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Banner Section -->
+    <div class="news-banner">
+        <h1>NSF RITEL Award</h1>
+    </div> 
+
+    <section class="news">
+        <h2>NSF RITEL Award</h2>
+        <p>Dr. Ni's team has been awarded funding from NSF's RITEL program to advance fire investigating training. 
+            This project will develop training platforms that will strength investigator's spatial-temporal reasoning skills for 
+            reconstructing fire development and scene features. Read more <a href="https://www.linkedin.com/posts/shuna-ni-a5b82b7b_thrilled-to-announce-that-our-team-pi-activity-7365567268996407297-M6bj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADGzYx0BvINchIBKrYs5LEIPS6edO7Qk1HM" target="_blank">here</a>.
+        </p>
+        <img src="" alt="News Image">
+    </section>
+
+    <!-- Bottom -->
+    <div id="bottom-placeholder"></div>
+
+    
+    <script src="../script.js"></script>
+    
+    <script>
+        fetch('../html/nav_2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector("#nav-placeholder").innerHTML = data;
+            if (typeof initializeHamburger === "function") {
+              initializeHamburger(); // ✅ This function comes from script.js
+            }
+          })
+          .catch(error => {
+            console.error('Error loading header:', error);
+          });
+    </script>
+      
+
+    <script>
+        fetch('../html/bottom_2.html')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('bottom-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
+
+</body>
+</html>
